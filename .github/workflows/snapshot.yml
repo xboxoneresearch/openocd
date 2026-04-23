@@ -85,7 +85,7 @@ jobs:
           LIBJAYLINK_CONFIG: --enable-shared --disable-static
           JIMTCL_CONFIG: --with-ext=json --minimal --disable-ssl
         run: |
-          # check if there is tag pointing at HEAD, otherwise take the HEAD SHA-1 as OPENOCD_TAG
+          # check if there is tag pointing at HEAD, otherwise take the HEAD SHA-1 as OPENOCD_TAG.
           OPENOCD_TAG="`git tag --points-at HEAD`"
           [ -z $OPENOCD_TAG ] && OPENOCD_TAG="`git rev-parse --short HEAD`"
           # check if there is tag pointing at HEAD, if so the release will have the same name as the tag,
